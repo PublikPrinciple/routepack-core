@@ -1,0 +1,28 @@
+{
+  "name": "@principlezero/routepack-core",
+  "version": "0.1.0",
+  "description": "A portable RoutePack kernel for governed, continuity-preserving execution.",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "workspaces": [
+    "systems/rpos"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "build:rpos": "npm --workspace @principlezero/rpos run build",
+    "test:rpos": "npm --workspace @principlezero/rpos run test",
+    "test:all": "npm test && npm run test:rpos",
+    "demo:rpos": "npm --workspace @principlezero/rpos run demo",
+    "start:rpos": "npm --workspace @principlezero/rpos run start"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "typescript": "^5.2.2"
+  }
+}

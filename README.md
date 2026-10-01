@@ -1,5 +1,11 @@
 # RoutePack Core
 
+> **Status: reference implementation — non-authoritative, not a runtime (2026-09-30).**
+> Not used by the MurMur runtime. This code does not define canonical RPOS semantics; the canonical
+> RPOS specification and its Python reference implementation are maintained in MurMur. Useful ideas
+> here may migrate into canonical RPOS; this code counts as an RPOS implementation only once it passes
+> the RPOS conformance corpus.
+
 `RoutePack Core` is a small, portable TypeScript kernel for the RoutePack Operating System (RPOS).
 
 It is the extractable core behind a governed transition:
